@@ -1,0 +1,25 @@
+<div class="page-header">
+  <div class="col-md-5"> </div>
+    <h1>Twitter <small>Edit this list</small></h1>
+</div>
+
+</br>
+</br>
+</br>
+</br>
+<div class="col-md-1">
+</div>
+
+<div class="col-md-4">
+	<%= form_for @list do |f| %>
+    <div class="form-group">
+    <label>Name</label>
+    <%= f.text_field :name, class: "form-control", placeholder: "Entrez un nom" %>
+    </div>
+    <div class="form-group">
+    <label>Email</label>
+    <%= f.text_field :comment, class: "form-control", placeholder: "Entrez une description" %>
+    </div>
+    <%= f.submit "Save", class: "btn btn-default" %>
+	<% end %>
+</div>

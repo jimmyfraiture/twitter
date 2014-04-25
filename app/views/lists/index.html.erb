@@ -1,0 +1,24 @@
+<div class="page-header">
+  <div class="col-md-5"> </div>
+    <h1>Twitter <small>Lists Index</small></h1>
+</div>
+
+<div class="container" style="margin-top:10px;">
+	<div class="col-md-6" >
+		<%= link_to 'New List', new_list_path , class: "btn btn-success" %> <%= link_to 'User Home', users_path, class: "btn btn-info" %>
+	</div>
+	<div class="col-md-12">
+		<div class="col-md-8 col-md-offset-3">
+			<table class="table table-striped">
+				<tr><th>id</th><th>Name</th><th>Comment</th><th></th><th></th><th></th></tr>
+				<% @lists.each do |list| %>
+				<tr><td><%= list.id %></td><td><%= list.name %></td><td><%= list.comment %></td><td><%= link_to 'Show List', list_path(list) , class: "btn btn-info" %></td><td><%= link_to 'Edit List', edit_list_path(list) , class: "btn btn-warning" %></td><td><%= link_to 'Delete List', list_path(list), method: :delete, data: { confirm: 'Are you sure?'} , class: "btn btn-danger" %></td></tr>
+				<% end %>
+			</table>
+		</div>
+	</div>
+
+		
+</div>
+
+

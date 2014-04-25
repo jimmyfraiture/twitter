@@ -1,0 +1,29 @@
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+
+
+<div class="col-md-4"> </div>
+<div class="col-md-4">
+	<%= form_for @user do |f| %>
+    <div class="form-group">
+    <label>Nom</label>
+    <%= f.text_field :username, class: "form-control", placeholder: "Entrez un nom" %>
+    </div>
+    <div class="form-group">
+    <label>Email</label>
+    <%= f.email_field :mail, class: "form-control", placeholder: "Entrez un mail" %>
+    </div>
+    <%= f.submit "Créer un utilisateur", class: "btn btn-default" %>
+	<% end %>
+</div>

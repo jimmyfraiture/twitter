@@ -1,0 +1,16 @@
+<div class="col-md-4"> </div>
+<h1>Que voulez vous tweeter ?</h1>
+</br>
+</br>
+</br>
+<div class="col-md-4"> </div>
+<div class="col-md-4">
+	<%= form_for [@user, @tweet] do |f| %>
+    <div class="form-group">
+    <label>Message</label>
+    <%= f.text_field :message, class: "form-control", placeholder: "Entrez votre message" %>
+    </div>
+    <%= f.submit "Poster", class: "btn btn-default" %>
+	<% end %>
+</div>
+ 
