@@ -2,12 +2,11 @@ Twitter::Application.routes.draw do
 
   root 'users#index'
   
-  get "lists/join"
-  get "lists/jupdate"
   resources :users do
     resources :tweets
   end
   resources :lists
+  resources :list_distributions
 
 
   # The priority is based upon order of creation: first created -> highest priority.

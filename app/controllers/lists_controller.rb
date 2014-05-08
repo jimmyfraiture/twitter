@@ -31,15 +31,6 @@ class ListsController < ApplicationController
     redirect_to lists_path
   end
 
-  def join
-    @ld = ListDistribution.new
-  end
-
-  def jupdate
-    ListDistribution.create(ld_params)
-    redirect_to lists_path
-  end
-
   private 
 
   def list_params
@@ -50,7 +41,4 @@ class ListsController < ApplicationController
     @list = List.find(params[:id])
   end
 
-  def ld_params
-    params.require(:list_distribution).permit(:id, :user_id, :list_id)
-  end
 end
