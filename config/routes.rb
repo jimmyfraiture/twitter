@@ -1,10 +1,10 @@
 Twitter::Application.routes.draw do
 
-  root 'users#index'
+  devise_for :users
+  #root 'users#index'
   
-  resources :users do
-    resources :tweets
-  end
+  resources :tweets
+
   resources :lists
   resources :list_distributions
 

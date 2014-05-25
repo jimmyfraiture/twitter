@@ -13,7 +13,7 @@
 			<table class="table table-striped">
 				<tr><th>id</th><th>Username</th><th>Email</th><th></th><th></th><th></th></tr>
 				<% @users.each do |user| %>
-				<tr><td><%= user.id %></td><td><%= user.username %></td><td><%= user.mail %></td><td><%= link_to 'Show User', user_path(user) , class: "btn btn-info" %></td><td><%= link_to 'Edit User', edit_user_path(user) , class: "btn btn-warning" %></td><td><%= link_to 'Delete User', user_path(user), method: :delete, data: { confirm: 'Are you sure?'} , class: "btn btn-danger" %></td></tr>
+				<tr><td><%= user.id %></td><td><%= user.username %></td><td><%= user.email %></td><td><%= link_to 'Show User', user_path(user) , class: "btn btn-info" %></td><td><%= link_to 'Edit User', edit_user_path(user) , class: "btn btn-warning" %></td><td><%= link_to 'Delete User', user_path(user), method: :delete, data: { confirm: 'Are you sure?'} , class: "btn btn-danger" %></td></tr>
 				<% end %>
 			</table>
 		</div>
