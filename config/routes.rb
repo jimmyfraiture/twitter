@@ -1,8 +1,8 @@
 Twitter::Application.routes.draw do
 
   devise_for :users
-  #root 'users#index'
-  
+  root 'use#index'
+  resources :uses
   resources :tweets
 
   resources :lists
