@@ -1,0 +1,23 @@
+<div class="page-header">
+  <div class="col-md-5"> </div>
+    <h1>Twitter <small>Show your user           <%= link_to 'Home', uses_path(user_id: @user.id) , class: "btn btn-success" %>
+</div></small></h1>
+</div>
+
+</br>
+</br>
+</br>
+</br>
+<div class="col-md-1">
+</div>
+<div class="col-md-4">
+    <div class="form-group">
+    <label>Nom : </label>
+    <%= @user.username %>
+    </div>
+    <div class="form-group">
+    <label>Email : </label>
+    <%= @user.email %>
+    </div>
+</div>
+

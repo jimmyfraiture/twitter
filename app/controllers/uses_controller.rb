@@ -1,4 +1,4 @@
-class UseController < ApplicationController
+class UsesController < ApplicationController
 	def index
 		@users = User.all
 	end
@@ -12,6 +12,4 @@ class UseController < ApplicationController
     def list_params
    		params.require(:users).permit(:id, :username, :email)
   	end
-
-
 end
